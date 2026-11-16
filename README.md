@@ -1,3 +1,5 @@
+> **Atualização importante:** esta versão contém um reverb CLUB instável e deve ser substituída. [Baixe a versão corrigida 0.3.1](https://github.com/aulamix001/CLA-DRUMS/raw/refs/heads/downloads-v0.3.1/downloads/CLA-Drums-0.3.1-Windows-x64.zip). Feche e reabra a DAW após substituir o plugin.
+
 # CLA Drums 0.3.0 — Windows x64 VST3
 
 [Baixar VST3 compilado para Windows 64 bits](https://github.com/aulamix001/CLA-DRUMS/raw/refs/heads/downloads-v0.3.0/downloads/CLA-Drums-0.3.0-Windows-x64.zip)
