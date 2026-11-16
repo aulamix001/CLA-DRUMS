@@ -1,19 +1,21 @@
-# CLA Drums 0.3.0 — Windows x64 VST3
+# CLA Drums 0.3.1 — correção do reverb / Windows x64 VST3
 
-[Baixar VST3 compilado para Windows 64 bits](https://github.com/aulamix001/CLA-DRUMS/raw/refs/heads/downloads-v0.3.0/downloads/CLA-Drums-0.3.0-Windows-x64.zip)
+**[Baixar VST3 corrigido para Windows 64 bits](https://github.com/aulamix001/CLA-DRUMS/raw/refs/heads/downloads-v0.3.1/downloads/CLA-Drums-0.3.1-Windows-x64.zip)**
 
-![Interface real do editor JUCE](preview/CLA-Drums-0.3.0.png)
+As versões 0.2/0.3 tinham um laço extra de realimentação no modo CLUB que podia oscilar sozinho, inclusive com o send abaixado. O defeito foi reproduzido e corrigido. Use a versão 0.3.1.
 
-A versão 0.3 recria o painel conforme a referência, com madeira e metal texturizados, moldura e divisórias em relevo, sete faders móveis com sprites de prata e sombra, seletor giratório, botões amarelos e visor de modos. Os valores numéricos aparecem durante interação. São 26 presets mapeados; Gate vira Delay no Cowbell. A barra superior inclui presets, undo/redo, A/B e Load/Save.
+- Laço externo removido; ganho wet normalizado e DC filtrado.
+- Três engines com transição suavizada, sem expor laços inativos.
+- Bypass do plugin e do host não congelam mais os ecos.
+- Tratamento de NaN/Inf, parâmetros inválidos e condições de bloco/taxa.
+- 26 presets, 151 cenários de estabilidade, testes funcionais e verificações ASan/UBSan passaram no Linux. Ver [relatório completo](VALIDATION-0.3.1.md).
 
-Os assets são recriados; identidade visual pixel a pixel não foi estabelecida. O processamento sonoro é autoral. O ZIP contém um VST3 real PE x86-64, compilado em C++17/JUCE 7.0.12. Os testes de áudio, estado, presets, controles e escala da interface passaram no Linux. Falta validar carregamento e reprodução em uma DAW Windows.
+Feche a DAW, extraia o ZIP e substitua a pasta inteira `CLA Drums.vst3` em `C:\Program Files\Common Files\VST3`. Abra a DAW e reescaneie os plugins. O ID do plugin e os IDs dos parâmetros foram mantidos. O nível wet foi recalibrado e pode soar mais baixo que nas versões defeituosas.
 
-## Instalar
+O arquivo é um VST3 Windows PE x86-64 real, compilado em C++17/JUCE 7.0.12. Ainda falta validar carregamento e reprodução em uma DAW Windows; os testes não demonstram ausência de toda falha possível. O binário de distribuição não depende dos sanitizadores.
 
-1. Baixe e extraia o ZIP.
-2. Copie a pasta inteira `CLA Drums.vst3` para `C:\Program Files\Common Files\VST3`.
-3. Reescaneie os plugins na DAW e insira o efeito em uma pista de áudio.
+A interface é a mesma da versão 0.3:
 
-Clique nas setas amarelas para trocar o modo; clique direito para ativar/desativar o módulo. Arraste o seletor ou clique no nome da peça. Clique no título da coleção para Direct/Wet, ou clique direito para bypass. Clique nos medidores para zerar clip. O logo temporário do JUCE pode aparecer na inicialização e desaparecer normalmente.
+![Interface do editor](preview/CLA-Drums-0.3.0.png)
 
-[Interface Cowbell em 2×](preview/CLA-Drums-0.3.0-Cowbell-2x.png). Checksums em `downloads/SHA256SUMS.txt`. A versão 0.2 permanece disponível na branch `downloads-v0.2.0`.
+Checksums em `downloads/SHA256SUMS.txt`.
