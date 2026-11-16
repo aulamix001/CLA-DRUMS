@@ -1,1 +1,2 @@
 d843a2aad64e1d1896703526c9f14d9134c646aaf1b325c3001d741bc55faa81  CLA-Drums-0.2.0-Windows-x64.zip
+f8157357a1f28b00bf63fab3333b0346831f84a6ea0f101bcd065ecc3ac6e154  CLA-Drums-0.3.0-Windows-x64.zip
